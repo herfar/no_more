@@ -2,6 +2,7 @@ package com.bost.done.controller;
 
 import com.bost.done.model.User;
 import com.bost.done.service.UserService;
+import com.bost.done.service.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,10 +15,10 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceInterface userService;
 
     @Autowired
-    public UserController(UserService userService) {
+    public UserController(UserServiceInterface userService) {
         this.userService = userService;
     }
 
